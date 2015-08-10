@@ -1,0 +1,9 @@
+1. A page with a form is created
+2. The user enters a number into the form
+3. The user presses the submit button
+4. The number is submitted
+5. The number is evaluated
+6. A second page is generated, which displays the range of numbers between 1 and the number submitted by the user, with the following exceptions:
+a) If a number within the range is divisible by 3, it should be replaced with the word "ping"
+b) If a number within the range is divisible by 5, it should be replaced with the word "pong"
+c) If a number within the range is divisible by both 3 and 5, it should be replaced with the words "ping pong"

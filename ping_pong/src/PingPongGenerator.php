@@ -21,21 +21,24 @@
         // }
         function playPingPong($input_number)
         {
-            $input_number = 0;
-            while ($input_number > 0) {
-                if ($input_number % 3) {
-                    return "ping";
-                } elseif ($input_number % 5) {
-                    return "pong";
-                } elseif ($input_number % 3 && $input_number % 5) {
-                    return "ping pong";
-                  else {
-                      return $input_number;
+            $results = "";
+            $count = 1;
+            while ($count <= $input_number) {
+                if ($count % 3 == 0 && $count % 5 == 0) {
+                    $results .= ", ping pong";
+                    // $results = $result . "ping";
+                } elseif ($count % 5 == 0) {
+                    $results .= ", pong";
+                } elseif ($count % 3 == 0) {
+                    $results .= ", ping";
+                }  else {
+                      $results .=  ", " . $count;
                   }
+                 ++$count;
                 }
-                ++$input_number;
+                $results = substr($results, 2);
+                return $results;
             }
         }
-    }
 
 ?>
